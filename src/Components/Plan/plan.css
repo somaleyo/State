@@ -10,3 +10,111 @@
     display: flex;
     gap: 15px;
 }
+.billing-container h5{
+    font-size: 16px;
+    font-weight: bold;
+}
+h6{
+    font-size: 14px;
+}
+
+toggle-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f8f9fc;
+  
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  background-color: #eef1f8;
+  border-radius: 10px;
+  margin-top: 30px;
+  width: 440px;
+  padding: 8px 20px;
+
+}
+.btn-back{
+    margin-left: 0;
+    background-color: transparent;
+    color: #1e3a8a;
+    font-weight: bold;
+}
+
+.toggle-option {
+  flex: 1;
+  text-align: center;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.toggle-option.active {
+  color: #1e3a8a;
+}
+
+.toggle-option.inactive {
+  color: #a0aec0;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  height: 28px;
+  display: inline-block;
+}
+
+.toggle-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  transition: all 0.4s ease;
+  border-radius: 34px;
+}
+
+.toggle-slider-button {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  bottom: 2px;
+  background-color: #1e3a8a;
+  transition: all 0.4s ease;
+  border-radius: 50%;
+}
+
+.toggle-slider-button.monthly {
+  left: 4px;
+}
+
+.toggle-slider-button.yearly {
+  left: 22px;
+}
+
+.cursor-icon {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: -5px;
+  top: -5px;
+  z-index: 2;
+}
+.btn:hover{
+    cursor: pointer;
+}
