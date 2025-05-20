@@ -46,10 +46,10 @@ function App() {
       </div>
       <div className="rightside">
         {/* <Info/> */}
-        {/* <Plan/> */}
+        <Plan/>
         {/* <Addon/> */}
         {/* <Summary/> */}
-        <Merci/>
+        {/* <Merci/> */}
       </div>
 
     </div>

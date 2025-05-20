@@ -6,6 +6,56 @@
     border-radius: 12px;
     
 }
+.box {
+  cursor: pointer;
+  border: 1px solid #d6d9e6;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Style pour la boîte sélectionnée */
+.box.selected {
+  border-color: #483EFF;
+  background-color: #F8F9FF;
+}
+
+/* Style au survol (hover) */
+.box:hover {
+  border-color: #483EFF;
+}
+
+/* Style pour l'icône et le texte */
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 40px;
+}
+
+h5 {
+  margin: 0;
+  margin-bottom: 6px;
+  color: #022959;
+  font-weight: 700;
+}
+
+.pricing {
+  color: #9699AA;
+  margin: 0;
+}
+
+.bonus {
+  color: #022959;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+/* Style pour le conteneur des plans */
+.billing-container {
+  display: flex;
+  gap: 18px;
+  margin: 30px 0;
+}
 .billing-container{
     display: flex;
     gap: 15px;

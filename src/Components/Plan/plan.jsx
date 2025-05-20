@@ -6,6 +6,8 @@ import pro from '/src/assets/images/pro.svg'
 
 export default function Plan(props) {
     const [isYearly, setIsYearly] = useState(false);
+    // État pour suivre le plan sélectionné: null, 'arcade', 'advanced', ou 'pro'
+    const [selectedPlan, setSelectedPlan] = useState(null);
 
     const handleToggleChange = () => {
         setIsYearly(!isYearly);
@@ -19,26 +21,52 @@ export default function Plan(props) {
         setIsYearly(true);
     };
 
+    // Fonction pour gérer la sélection d'un plan
+    const handlePlanSelection = (plan) => {
+        setSelectedPlan(plan);
+    };
+
+    // Calculer les prix en fonction du billing cycle (mensuel ou annuel)
+    const getPriceDisplay = (monthlyPrice) => {
+        if (isYearly) {
+            const yearlyPrice = monthlyPrice * 10; // Par exemple, 10 mois pour le prix de 12
+            return `$${yearlyPrice}/yr`;
+        }
+        return `$${monthlyPrice}/mo`;
+    };
+
     return(
         <>
             <h1>Select your plan</h1>
             <h6>You have the option of monthly or yearly billing</h6>
 
             <div className="billing-container">
-                <div className="arcade box">
+                <div 
+                    className={`arcade box ${selectedPlan === 'arcade' ? 'selected' : ''}`}
+                    onClick={() => handlePlanSelection('arcade')}
+                >
                     <img src={arcade} alt="" className="icon" />
                     <h5>Arcade</h5>
-                    <p className='pricing'>${props.prix} </p>
+                    <p className='pricing'>{getPriceDisplay(9)}</p>
+                    {isYearly && <p className="bonus">2 months free</p>}
                 </div>
-                <div className="advanced box">
+                <div 
+                    className={`advanced box ${selectedPlan === 'advanced' ? 'selected' : ''}`}
+                    onClick={() => handlePlanSelection('advanced')}
+                >
                     <img src={advanced} alt="" className="icon" />
                     <h5>Advanced</h5>
-                    <p className='pricing'>${props.prix} </p>
+                    <p className='pricing'>{getPriceDisplay(12)}</p>
+                    {isYearly && <p className="bonus">2 months free</p>}
                 </div>
-                <div className="pro box">
+                <div 
+                    className={`pro box ${selectedPlan === 'pro' ? 'selected' : ''}`}
+                    onClick={() => handlePlanSelection('pro')}
+                >
                     <img src={pro} alt="" className="icon" />
                     <h5>Pro</h5>
-                    <p className='pricing'>${props.prix} </p>
+                    <p className='pricing'>{getPriceDisplay(15)}</p>
+                    {isYearly && <p className="bonus">2 months free</p>}
                 </div>
             </div>
             <div className="toggle-container-wrapper">
@@ -81,7 +109,14 @@ export default function Plan(props) {
             <button className="btn btn-back">
                 Go Back
             </button>
-            <button className="btn btn-next">
+            <button 
+                className="btn btn-next"
+                onClick={() => {
+                    if (selectedPlan && props.onNext) {
+                        props.onNext(selectedPlan, isYearly);
+                    }
+                }}
+            >
                 Next Step
             </button>
         </>
