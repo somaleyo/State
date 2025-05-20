@@ -12,9 +12,10 @@ body{
     
 
 }
-.bg{
+.bg-img{
     position: absolute;
     z-index: -1;
+   
     
 }
 .steps{
@@ -62,9 +63,36 @@ h3{
 }
 h1{
     margin-bottom: 0;
+    color: hsl(213, 96%, 18%);
 }
 h6{
     margin-top: 10px;
     color: hsl(231, 11%, 63%);
     margin-left: 2px;
+    margin-bottom: 50px;
+}
+h5{
+    font-size: 13px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    color: hsl(213, 96%, 18%);
+}
+input{
+    padding: 13px;
+    border-radius: 15px;
+    width: 350px;
+    margin-bottom: 10px;
+}
+.btn{
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 100px;
+    margin-left: 280px;
+    font-weight: 700;
+
 }

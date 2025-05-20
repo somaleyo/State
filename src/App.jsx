@@ -9,7 +9,7 @@ function App() {
     <>
     <div className="container">
       <div className="leftside">
-        <img src={bg} className='bg' alt="" />
+        <img src={bg} className='bg-img' alt="" />
         <div className="steps">
            <span className='numero'>1</span>
            <div className="text">
@@ -41,7 +41,8 @@ function App() {
        
       </div>
       <div className="rightside">
-        <Info/>
+        {/* <Info/> */}
+        
       </div>
     </div>
    

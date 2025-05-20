@@ -13,6 +13,9 @@ export default function Info(props) {
                 <h5>Your phone number is:</h5>
                 <input type="text" placeholder='ex +3204034885' />
             </div>
+            <button className="btn btn-next" onClick={props.event}>
+                Next Step
+            </button>
         </>
     )
 }
