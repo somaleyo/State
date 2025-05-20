@@ -2,10 +2,12 @@
 body{
     color: white;
     font-family: "Ubuntu";
+    background-color:  hsl(229, 24%, 87%);
 }
+
 .leftside{
-    margin-left: 300px;
-    margin-top: 50px;
+  
+    
     gap: 0px;
     display: flex;
     flex-direction: column;
@@ -14,7 +16,7 @@ body{
 }
 .bg-img{
     position: absolute;
-    z-index: -1;
+    
    
     
 }
@@ -24,6 +26,7 @@ body{
     gap: 30px;
     margin-left: 30px;
     margin-top: 30px;
+    z-index: 1;
 }
 
 p{
@@ -55,6 +58,13 @@ h3{
 .container{
     display: flex;
     gap: 150px;
+    background-color: white;
+    margin-left: 300px;
+    border-radius: 15px;
+    margin-top: 50px;
+    padding: 15px;
+    height: 570px;
+    width: 900px;
    
 }
 .rightside{

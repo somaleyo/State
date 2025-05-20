@@ -5,6 +5,7 @@ import Info from './Components/Info/info'
 import Plan from './Components/Plan/plan'
 import Addon from './Components/ad/addon'
 import Summary from './Components/Summary/summary'
+import Merci from './Components/Thanks/merci'
 
 function App() {
  
@@ -44,10 +45,11 @@ function App() {
        
       </div>
       <div className="rightside">
-        <Info/>
+        {/* <Info/> */}
         {/* <Plan/> */}
         {/* <Addon/> */}
         {/* <Summary/> */}
+        <Merci/>
       </div>
 
     </div>
