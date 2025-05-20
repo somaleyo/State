@@ -1,0 +1,20 @@
+.merci-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+.merci-container h6{
+    margin-top: 15px;
+    height: 200px;
+    width: 480px;
+    font-size: 16px;
+    text-align: center;
+}
+.merci{
+    width: 80px;
+    gap: 15px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
