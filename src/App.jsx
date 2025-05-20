@@ -3,6 +3,7 @@ import bg from '/src/assets/images/sidebar.svg'
 import './App.css'
 import Info from './Components/Info/info'
 import Plan from './Components/Plan/plan'
+import Addon from './Components/ad/addon'
 
 function App() {
  
@@ -43,8 +44,10 @@ function App() {
       </div>
       <div className="rightside">
         {/* <Info/> */}
-        <Plan/>
+        {/* <Plan/> */}
+        <Addon/>
       </div>
+
     </div>
    
     </>
