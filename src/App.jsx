@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import bg from '/src/assets/images/sidebar.svg'
 import './App.css'
+import Info from './Components/Info/info'
 
 function App() {
  
@@ -40,7 +41,7 @@ function App() {
        
       </div>
       <div className="rightside">
-
+        <Info/>
       </div>
     </div>
    

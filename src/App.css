@@ -51,3 +51,20 @@ h3{
     color: hsl(213, 96%, 18%);
     background-color: hsl(228, 100%, 84%);
 }
+.container{
+    display: flex;
+    gap: 150px;
+   
+}
+.rightside{
+    color: black;
+     margin-top: 80px;
+}
+h1{
+    margin-bottom: 0;
+}
+h6{
+    margin-top: 10px;
+    color: hsl(231, 11%, 63%);
+    margin-left: 2px;
+}
