@@ -17,24 +17,24 @@ function App() {
            </div>
         </div>
         <div className="steps">
-           <span className='numero'>1</span>
+           <span className='numero'>2</span>
            <div className="text">
-           <p>STEP 1</p>
-           <h3>YOUR INFO</h3>
+           <p>STEP 2</p>
+           <h3>SELECT PLAN</h3>
            </div>
         </div>
         <div className="steps">
-           <span className='numero'>1</span>
+           <span className='numero'>3</span>
            <div className="text">
-           <p>STEP 1</p>
-           <h3>YOUR INFO</h3>
+           <p>STEP 3</p>
+           <h3>ADD-ONS</h3>
            </div>
         </div>
         <div className="steps">
-           <span className='numero'>1</span>
+           <span className='numero'>4</span>
            <div className="text">
-           <p>STEP 1</p>
-           <h3>YOUR INFO</h3>
+           <p>STEP 4</p>
+           <h3>SUMMARY</h3>
            </div>
         </div>
        
