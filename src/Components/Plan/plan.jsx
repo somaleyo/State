@@ -29,11 +29,12 @@ export default function Plan(props) {
     // Calculer les prix en fonction du billing cycle (mensuel ou annuel)
     const getPriceDisplay = (monthlyPrice) => {
         if (isYearly) {
-            const yearlyPrice = monthlyPrice * 10; // Par exemple, 10 mois pour le prix de 12
+            const yearlyPrice = monthlyPrice * 10; 
             return `$${yearlyPrice}/yr`;
         }
         return `$${monthlyPrice}/mo`;
     };
+
 
     return(
         <>
@@ -88,11 +89,9 @@ export default function Plan(props) {
                         <span className="toggle-slider">
                             <span 
                                 className={`toggle-slider-button ${isYearly ? "yearly" : "monthly"}`}
-                            />
-                            
+                            />   
                         </span>
                     </label>
-
                     <div 
                         className={`toggle-option ${isYearly ? "active" : "inactive"}`}
                         onClick={handleYearlyClick}
@@ -104,17 +103,7 @@ export default function Plan(props) {
             <button className="btn btn-back" onClick={props.back}>
                 Go Back
             </button>
-            <button 
-                className="btn btn-next"
-                onClick={props.next}
-                    // if (selectedPlan && props.onNext) {
-                    //     props.onNext(selectedPlan, isYearly);
-                    // } 
-                    >
-            
-
-                
-           
+            <button className="btn btn-next" onClick={props.next}>           
                 Next Step
             </button>
         </>

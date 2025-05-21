@@ -51,7 +51,15 @@ const Monthly = {
   profile:2,
 }
 
-
+const [formData, setFormData] = useState({
+  plan: null, // 'arcade', 'advanced', ou 'pro'
+  billingCycle: false, // false pour mensuel, true pour annuel
+  addons: {
+    onlineService: false,
+    largerStorage: false,
+    customizableProfile: false
+  }
+});
   return (
     <>
     <div className="container">
@@ -89,9 +97,15 @@ const Monthly = {
       </div>
       <div className="rightside">
         {isinfo ? <Info event={infoNextClick}/>:''}
-        {isplan ? <Plan back={planBackClick} next={planNextClick} arcade={Monthly.arcade} advanced={Monthly.advanced} pro={Monthly.pro} />:''}
-        {isaddon? <Addon back={addonBackClick} next={addonNextClick} />:''}
-        {issummary ? <Summary back={summaryBackClick} next={summaryNextClick} />:''}
+        {isplan ? <Plan back={planBackClick} next={planNextClick} arcade={Monthly.arcade} advanced={Monthly.advanced} pro={Monthly.pro} formData={formData}
+    setFormData={setFormData}/>:''}
+        {isaddon? <Addon back={addonBackClick} next={addonNextClick} formData={formData}
+      setFormData={setFormData}
+        isYearly={formData.billingCycle}
+      prices={Monthly} />:''}
+        {issummary ? <Summary back={summaryBackClick} next={summaryNextClick} formData={formData}
+      setFormData={setFormData}
+      prices={Monthly}/>:''}
         {ismerci ? <Merci/>:''}
         
       </div>
