@@ -32,6 +32,7 @@ export default function Info(props) {
                     placeholder='Ving-six' 
                     value={name}
                     onChange={handleNameChange}
+                    required
                 />
                 
                 <h5>Your email is: {email}</h5>
@@ -40,6 +41,7 @@ export default function Info(props) {
                     placeholder='Ving-six@email.com' 
                     value={email}
                     onChange={handleEmailChange}
+                    required
                 />
                 
                 <h5>Your phone number is: {phone}</h5>
@@ -48,6 +50,7 @@ export default function Info(props) {
                     placeholder='ex +3204034885' 
                     value={phone}
                     onChange={handlePhoneChange}
+                    required
                 />
             </div>
             <button className="btn btn-next" onClick={props.event}>

@@ -47,11 +47,13 @@ h3{
     padding-left: 15px;
     padding-right: 15px;
     font-weight: bold;
+
 }
+.numero
 .steps:first-of-type{
     margin-top: 50px;
 }
-.numero:active{
+.numero.active{
     color: hsl(213, 96%, 18%);
     background-color: hsl(228, 100%, 84%);
 }

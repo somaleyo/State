@@ -8,6 +8,15 @@ import Summary from './Components/Summary/summary'
 import Merci from './Components/Thanks/merci'
 
 function App() {
+ const [isinfo,setIsinfo]= useState(true)
+ const [isplan,setIsplan]= useState(false)
+ const [isaddon,setIsaddon]= useState(false)
+ const [issummary,setIssummary]= useState(false)
+ const [ismerci,setIsmerci]= useState(false)
+ const infoNextClick = ()=>{
+  setIsinfo(false)
+  setIsplan(true)
+ }
  
   return (
     <>
@@ -45,11 +54,11 @@ function App() {
        
       </div>
       <div className="rightside">
-        {/* <Info/> */}
-        <Plan/>
-        {/* <Addon/> */}
-        {/* <Summary/> */}
-        {/* <Merci/> */}
+        {isinfo ? <Info event={infoNextClick}/>:''}
+        {isplan ? <Plan/>:''}
+        {isaddon? <Addon/>:''}
+        {issummary ? <Summary/>:''}
+        {ismerci ? <Merci/>:''}
       </div>
 
     </div>
