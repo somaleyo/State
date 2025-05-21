@@ -4,29 +4,45 @@ import arcade from '/src/assets/images/arcade.svg'
 import advanced from '/src/assets/images/advenced.svg'
 import pro from '/src/assets/images/pro.svg'
 
-export default function Plan(props) {
-    const [isYearly, setIsYearly] = useState(false);
-    // État pour suivre le plan sélectionné: null, 'arcade', 'advanced', ou 'pro'
-    const [selectedPlan, setSelectedPlan] = useState(null);
+
+  
+    export default function Plan(props) {
+    // Ne plus utiliser des états locaux, mais plutôt les états globaux
+    // Extraire les valeurs du formData passé via props
+    const isYearly = props.formData.billingCycle;
+    const selectedPlan = props.formData.plan;
 
     const handleToggleChange = () => {
-        setIsYearly(!isYearly);
+        // Mettre à jour l'état global
+        props.setFormData({
+            ...props.formData,
+            billingCycle: !isYearly
+        });
     };
 
     const handleMonthlyClick = () => {
-        setIsYearly(false);
+        props.setFormData({
+            ...props.formData,
+            billingCycle: false
+        });
     };
 
     const handleYearlyClick = () => {
-        setIsYearly(true);
+        props.setFormData({
+            ...props.formData,
+            billingCycle: true
+        });
     };
 
-    // Fonction pour gérer la sélection d'un plan
+    // Mise à jour du plan sélectionné dans l'état global
     const handlePlanSelection = (plan) => {
-        setSelectedPlan(plan);
+        props.setFormData({
+            ...props.formData,
+            plan: plan
+        });
     };
 
-    // Calculer les prix en fonction du billing cycle (mensuel ou annuel)
+    // Calculer les prix en fonction du billing cycle
     const getPriceDisplay = (monthlyPrice) => {
         if (isYearly) {
             const yearlyPrice = monthlyPrice * 10; 
