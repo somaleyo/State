@@ -1,0 +1,39 @@
+.change{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.confirmation{
+    margin-left: 30px;
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+ background-color: hsl(231, 100%, 99%);
+ 
+}
+.confirmation h6{
+    margin-bottom: 10px;
+}
+.addons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.confirmation h3{
+    font-size: 17px;
+    color: #022959;
+}
+.confirmation h2{
+    color: #022959;
+   
+}
+.description-holder{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+.btn{
+    margin-top: 35px;
+}
+.summary-h6{
+    margin-bottom: 30px;
+}

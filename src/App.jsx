@@ -41,7 +41,10 @@ const summaryNextClick =()=>{
   setIssummary(false)
   setIsmerci(true)
 }
-
+const changeClick =()=>{
+  setIssummary(false)
+  setIsplan(true)
+}
 const Monthly = {
   arcade:9,
   advanced:12,
@@ -105,7 +108,7 @@ const [formData, setFormData] = useState({
       prices={Monthly} />:''}
         {issummary ? <Summary back={summaryBackClick} next={summaryNextClick} formData={formData}
       setFormData={setFormData}
-      prices={Monthly}/>:''}
+      prices={Monthly} change={changeClick}/>:''}
         {ismerci ? <Merci/>:''}
         
       </div>
