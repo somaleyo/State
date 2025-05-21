@@ -25,7 +25,23 @@ function App() {
   setIsplan(false)
   setIsaddon(true)
  }
- 
+ const addonBackClick = () =>{
+  setIsaddon(false)
+  setIsplan(true)
+ }
+ const addonNextClick =()=>{
+  setIsaddon(false)
+  setIssummary(true)
+}
+const summaryBackClick =()=>{
+  setIssummary(false)
+  setIsaddon(true)
+} 
+const summaryNextClick =()=>{
+  setIssummary(false)
+  setIsmerci(true)
+}
+
   return (
     <>
     <div className="container">
@@ -64,9 +80,10 @@ function App() {
       <div className="rightside">
         {isinfo ? <Info event={infoNextClick}/>:''}
         {isplan ? <Plan back={planBackClick} next={planNextClick}/>:''}
-        {isaddon? <Addon/>:''}
-        {issummary ? <Summary/>:''}
+        {isaddon? <Addon back={addonBackClick} next={addonNextClick} />:''}
+        {issummary ? <Summary back={summaryBackClick} next={summaryNextClick} />:''}
         {ismerci ? <Merci/>:''}
+        
       </div>
 
     </div>

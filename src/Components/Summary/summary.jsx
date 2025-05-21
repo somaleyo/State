@@ -25,10 +25,10 @@ export default function Summary(props) {
                     <h6>Total {props.temps}</h6>
                     <h2>{props.total} </h2>
                 </div>
-                <button className="btn btn-back">
+                <button className="btn btn-back" onClick={props.back}>
                     Go Back
                 </button>
-                <button className="btn btn-next">
+                <button className="btn btn-next" onClick={props.next}>
                     Next Step</button>                
 
             </div>

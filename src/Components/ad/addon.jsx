@@ -76,10 +76,10 @@ export default function Addon(props) {
         </div>
       </div>
     </div>
-    <button className="btn btn-back">
+    <button className="btn btn-back" onClick={props.back}>
         Go Back
     </button>
-    <button className="btn-next btn">
+    <button className="btn-next btn" onClick={props.next}>
         Next Step
     </button>
     </>
