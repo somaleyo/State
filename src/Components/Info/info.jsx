@@ -53,7 +53,7 @@ export default function Info(props) {
                     required
                 />
             </div>
-            <button className="btn btn-next btn-info" onClick={props.event}>
+            <button className="btn btn-info  " onClick={props.event}>
                 Next Step
             </button>
         </>

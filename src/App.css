@@ -10,11 +10,14 @@ body{
     gap: 0px;
     display: flex;
     flex-direction: column;
+    background-image: url('/src/assets/images/sidebar.svg');
+    width: 280px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   border-radius: 15Px;
+
 }
-.bg-img{
-    position: absolute;
-    
-}
+
 .steps{
     display: flex;
     align-items: center;
@@ -54,7 +57,7 @@ h3{
 }
 .container{
     display: flex;
-    gap: 150px;
+    gap: 80px;
     background-color: white;
     margin-left: 300px;
     border-radius: 15px;
@@ -62,11 +65,13 @@ h3{
     padding: 15px;
     height: 570px;
     width: 900px;
+    
    
 }
 .rightside{
     color: black;
-     margin-top: 80px;
+    margin-top: 50px;
+   
 }
 
 @media (max-width:376px){
@@ -76,11 +81,20 @@ h3{
         margin-left: 5px;
         width: 350px;
     }
+    .leftside{
+        background-position: bottom;
+        height: 300px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 300px;
+    }
     .rightside{
         margin-top: 200px;
     }
     .bg-img{
         margin-left: 40px;
+       height: 100px;
+       width: 300px;
     }
     .steps{
         margin-left: 80px;
@@ -92,20 +106,40 @@ h3{
         height: 1100px;
         margin-left: 5px;
         width: 380px;
+        gap: 10px;
+    }
+    .leftside{
+        background-position: bottom;
+        height: 320px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 380px;
     }
     .rightside{
-        margin-top: 200px;
+        margin-top: 50px;
     }
     .bg-img{
         margin-left: 40px;
     }
     .steps{
         margin-left: 80px;
+        margin-top: 10px;
     }
 }
 @media (min-width:426px) and (max-width:769px){
     .container{
         margin-left: 0px;
         width: 700px;
+        gap: 35px;
+    }
+  .rightside{
+    width: 500px;
+  }
+  
+}
+
+@media (min-width:1025px) and (max-width:1441px){
+    .container{
+        gap: 75px;
     }
 }

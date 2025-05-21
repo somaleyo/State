@@ -46,3 +46,14 @@
        margin-left: 130px;
     }
 }
+@media (min-width:769px) and (max-width:1025px){
+    .btn-sum{
+        margin-left: 250px;
+    }
+
+}
+@media (min-width:1025px) and (max-width:1441px){
+    .btn-next{
+        margin-left: 250px;
+    }
+}

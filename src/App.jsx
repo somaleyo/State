@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import bg from '/src/assets/images/sidebar.svg'
 import './App.css'
 import Info from './Components/Info/info'
 import Plan from './Components/Plan/plan'
@@ -67,7 +66,7 @@ const [formData, setFormData] = useState({
     <>
     <div className="container">
       <div className="leftside">
-        <img src={bg} className='bg-img' alt="" />
+        
         <div className="steps">
            <span className={isinfo? 'active numero':'numero'}>1</span>
            <div className="text">

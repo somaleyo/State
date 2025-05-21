@@ -30,3 +30,16 @@
         width: 350px;
     }
 }
+@media (min-width:426px) and (max-width:769px){
+    .merci-container h6{
+        width: 350px;
+    }
+    .merci-container{
+        margin-top: 80px;
+    }
+}
+@media (min-width:1025px) and (max-width:1441px){
+    .merci-container{
+        margin-top: 40px;
+    }
+}
