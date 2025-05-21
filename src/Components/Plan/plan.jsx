@@ -47,8 +47,8 @@ export default function Plan(props) {
                 >
                     <img src={arcade} alt="" className="icon" />
                     <h5>Arcade</h5>
-                    <p className='pricing'>{getPriceDisplay(9)}</p>
-                    {isYearly && <p className="bonus">2 months free</p>}
+                    <p className='pricing'>{getPriceDisplay(props.arcade)}</p>
+                    {isYearly }
                 </div>
                 <div 
                     className={`advanced box ${selectedPlan === 'advanced' ? 'selected' : ''}`}
@@ -56,8 +56,8 @@ export default function Plan(props) {
                 >
                     <img src={advanced} alt="" className="icon" />
                     <h5>Advanced</h5>
-                    <p className='pricing'>{getPriceDisplay(12)}</p>
-                    {isYearly && <p className="bonus">2 months free</p>}
+                    <p className='pricing'>{getPriceDisplay(props.advanced)}</p>
+                    {isYearly}
                 </div>
                 <div 
                     className={`pro box ${selectedPlan === 'pro' ? 'selected' : ''}`}
@@ -65,8 +65,8 @@ export default function Plan(props) {
                 >
                     <img src={pro} alt="" className="icon" />
                     <h5>Pro</h5>
-                    <p className='pricing'>{getPriceDisplay(15)}</p>
-                    {isYearly && <p className="bonus">2 months free</p>}
+                    <p className='pricing'>{getPriceDisplay(props.pro)}</p>
+                    {isYearly }
                 </div>
             </div>
             <div className="toggle-container-wrapper">

@@ -42,34 +42,44 @@ const summaryNextClick =()=>{
   setIsmerci(true)
 }
 
+const Monthly = {
+  arcade:9,
+  advanced:12,
+  pro:15,
+  online:1,
+  storage:2,
+  profile:2,
+}
+
+
   return (
     <>
     <div className="container">
       <div className="leftside">
         <img src={bg} className='bg-img' alt="" />
         <div className="steps">
-           <span className='numero'>1</span>
+           <span className={isinfo? 'active numero':'numero'}>1</span>
            <div className="text">
            <p>STEP 1</p>
            <h3>YOUR INFO</h3>
            </div>
         </div>
         <div className="steps">
-           <span className='numero'>2</span>
+           <span className={isplan? 'active numero':'numero'}>2</span>
            <div className="text">
            <p>STEP 2</p>
            <h3>SELECT PLAN</h3>
            </div>
         </div>
         <div className="steps">
-           <span className='numero'>3</span>
+           <span className={isaddon? 'active numero':'numero'}>3</span>
            <div className="text">
            <p>STEP 3</p>
            <h3>ADD-ONS</h3>
            </div>
         </div>
         <div className="steps">
-           <span className='numero'>4</span>
+           <span className={issummary? 'active numero':'numero'}>4</span>
            <div className="text">
            <p>STEP 4</p>
            <h3>SUMMARY</h3>
@@ -79,7 +89,7 @@ const summaryNextClick =()=>{
       </div>
       <div className="rightside">
         {isinfo ? <Info event={infoNextClick}/>:''}
-        {isplan ? <Plan back={planBackClick} next={planNextClick}/>:''}
+        {isplan ? <Plan back={planBackClick} next={planNextClick} arcade={Monthly.arcade} advanced={Monthly.advanced} pro={Monthly.pro} />:''}
         {isaddon? <Addon back={addonBackClick} next={addonNextClick} />:''}
         {issummary ? <Summary back={summaryBackClick} next={summaryNextClick} />:''}
         {ismerci ? <Merci/>:''}
