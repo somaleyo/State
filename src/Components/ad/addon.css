@@ -108,3 +108,8 @@
   color: #8b5cf6;
   font-size: 14px;
 }
+@media (min-width:426px) and (max-width:769px){
+  .subscription-option{
+    width: 320px;
+  }
+}

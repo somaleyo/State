@@ -37,3 +37,12 @@
 .summary-h6{
     margin-bottom: 30px;
 }
+
+@media (min-width:426px) and (max-width:769px){
+    .confirmation{
+        margin-left: 0;
+    }
+    .btn-sum{
+       margin-left: 130px;
+    }
+}

@@ -18,3 +18,15 @@
     margin-bottom: 40px;
     margin-top: 40px;
 }
+@media (max-width:376px){
+    .merci-container h6{
+        font-size: 13px;
+        width: 300px;
+    }
+}
+@media (min-width:376px) and (max-width:426px){
+    .merci-container h6{
+        font-size: 13px;
+        width: 350px;
+    }
+}

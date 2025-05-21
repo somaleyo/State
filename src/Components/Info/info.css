@@ -44,3 +44,17 @@ h1{
         margin-left: 230px;
     }
 }
+@media (min-width:376px) and (max-width:426px){
+   input{
+        width: 320px;
+    }
+    .btn{
+        margin-left: 250px;
+    }
+}
+@media (min-width:426px) and (max-width:769px){
+    .btn-info{
+        margin-left: 200px; 
+    }
+    
+}

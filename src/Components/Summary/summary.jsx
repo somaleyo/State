@@ -93,7 +93,7 @@ export default function Summary(props) {
              <button className="btn btn-back" onClick={props.back}>
                     Go Back
                 </button>
-                <button className="btn btn-next" onClick={props.next}>
+                <button className="btn btn-next btn-sum" onClick={props.next}>
                     Next Step
                 </button>
         </>

@@ -168,3 +168,41 @@ toggle-container-wrapper {
 .btn:hover{
     cursor: pointer;
 }
+
+@media (max-width:376px){
+  .toggle-container{
+    width: 300px;
+  }
+  .btn-next{
+    margin-top: 0;
+    margin-left: 150px;
+  }
+}
+@media (min-width:376px) and (max-width:426px){
+   .toggle-container{
+    width: 330px;
+  }
+  .btn-next{
+    margin-top: 0;
+    margin-left: 180px;
+  }
+}
+@media (min-width:426px) and (max-width:769px){
+  .btn{
+    margin-left: 270px;
+    
+  }
+  .btn-back{
+    margin-left: 0px;
+
+  }
+  .btn-next{
+    margin-left: 170px;
+  }
+  .box{
+    width: 80px;
+  }
+  .toggle-container{
+    width: 330px;
+  }
+}

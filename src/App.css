@@ -3,6 +3,7 @@ body{
     color: white;
     font-family: "Ubuntu";
     background-color:  hsl(229, 24%, 87%);
+    transition: 0.3 ease;
 }
 
 .leftside{
@@ -83,5 +84,28 @@ h3{
     }
     .steps{
         margin-left: 80px;
+    }
+}
+@media (min-width:376px) and (max-width:426px){
+  .container{
+        flex-direction: column;
+        height: 1100px;
+        margin-left: 5px;
+        width: 380px;
+    }
+    .rightside{
+        margin-top: 200px;
+    }
+    .bg-img{
+        margin-left: 40px;
+    }
+    .steps{
+        margin-left: 80px;
+    }
+}
+@media (min-width:426px) and (max-width:769px){
+    .container{
+        margin-left: 0px;
+        width: 700px;
     }
 }
