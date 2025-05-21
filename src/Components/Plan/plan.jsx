@@ -89,12 +89,7 @@ export default function Plan(props) {
                             <span 
                                 className={`toggle-slider-button ${isYearly ? "yearly" : "monthly"}`}
                             />
-                            <div className="cursor-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                                    <path d="M13.75 6.75L19.25 12L13.75 17.25" />
-                                    <path d="M19 12H4.75" />
-                                </svg>
-                            </div>
+                            
                         </span>
                     </label>
 
@@ -106,17 +101,20 @@ export default function Plan(props) {
                     </div>
                 </div>
             </div>
-            <button className="btn btn-back">
+            <button className="btn btn-back" onClick={props.back}>
                 Go Back
             </button>
             <button 
                 className="btn btn-next"
-                onClick={() => {
-                    if (selectedPlan && props.onNext) {
-                        props.onNext(selectedPlan, isYearly);
-                    }
-                }}
-            >
+                onClick={props.next}
+                    // if (selectedPlan && props.onNext) {
+                    //     props.onNext(selectedPlan, isYearly);
+                    // } 
+                    >
+            
+
+                
+           
                 Next Step
             </button>
         </>
