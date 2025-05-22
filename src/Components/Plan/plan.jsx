@@ -65,7 +65,7 @@ import pro from '/src/assets/images/pro.svg'
                     <img src={arcade} alt="" className="icon" />
                     <h5>Arcade</h5>
                     <p className='pricing'>{getPriceDisplay(props.arcade)}</p>
-                    {isYearly }
+                    
                 </div>
                 <div 
                     className={`advanced box ${selectedPlan === 'advanced' ? 'selected' : ''}`}
@@ -74,7 +74,7 @@ import pro from '/src/assets/images/pro.svg'
                     <img src={advanced} alt="" className="icon" />
                     <h5>Advanced</h5>
                     <p className='pricing'>{getPriceDisplay(props.advanced)}</p>
-                    {isYearly}
+                    
                 </div>
                 <div 
                     className={`pro box ${selectedPlan === 'pro' ? 'selected' : ''}`}
@@ -83,7 +83,7 @@ import pro from '/src/assets/images/pro.svg'
                     <img src={pro} alt="" className="icon" />
                     <h5>Pro</h5>
                     <p className='pricing'>{getPriceDisplay(props.pro)}</p>
-                    {isYearly }
+                    
                 </div>
             </div>
             <div className="toggle-container-wrapper">
