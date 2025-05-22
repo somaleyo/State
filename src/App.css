@@ -81,6 +81,7 @@ h3{
         margin-left: 5px;
         width: 350px;
     }
+
     .leftside{
         background-position: bottom;
         height: 300px;
@@ -89,7 +90,7 @@ h3{
         width: 300px;
     }
     .rightside{
-        margin-top: 200px;
+        margin-top: 50px;
     }
     .bg-img{
         margin-left: 40px;
@@ -137,9 +138,16 @@ h3{
   }
   
 }
+@media (min-width:769px) and (max-width:1025px){
+    .container{
+        margin-left: 50px;
+    }
+}
+
 
 @media (min-width:1025px) and (max-width:1441px){
     .container{
         gap: 75px;
+        margin-left: 250px;
     }
 }
